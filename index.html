@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color: #770084;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: peru;
+            text-align: center;
+        }
+        #result {
+            color: #770080;
+            font-weight: bold;
+        }
+        #electricitybill{
+            /* display: flex;
+            align-items: center; */
+            font: Arial;
+            width: 45%;
+            height: 500px;
+            /* height:50px; */
+            border: 2px solid black;
+            background-color: pink;
+        }
+        th{
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        td,th{
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        form{
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="readingCost()">
+        <h2>Electricity Bill</h2>
+        <table id="electricitybill">
+            <tr>
+                <th>Enter RR number</th>
+                <td>
+                    <input type="text" id="rrno" placeholder="Enter your RR Number"><label for="rrno"></label>
+                </td>
+            </tr>
+            <tr>
+                <th>Consumer Name</th>
+                <td>
+                    <input type="text" id="cname" placeholder="Enter consumer name">
+                </td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><textarea name="address" id="address" cols="20" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <th>Bill Reading Date</th>
+                <td>
+                    <input type="date" id="billDate">
+                </td>
+            </tr>
+            <tr>
+                <th>Enter Old Meter Reading</th>
+                <td>
+                    <input type="number" id="oldReading" placeholder="Enter Old Reading"><label for="oldReading"></label>
+                </td>
+            </tr>
+            <tr>
+                <th>Enter Current Meter Reading</th>
+                <td>
+                    <input type="number" id="currReading" placeholder="Enter Current Reading"><label for="currReading"></label>
+                </td>
+            </tr>
+            <tr>
+                <th>Enter Arrears if any.</th>
+                <td>
+                    <input type="number" id="arrears" value="0"><label for="arrears"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" id="reset" value="Clear">
+                </td>
+                <td>
+                    <input type="submit" id="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+        <div id="result"></div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
